@@ -1,0 +1,2 @@
+[console_scripts]
+doctra = doctra.cli.main:cli

@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: doctra-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    # Render sets the PORT environment variable automatically.
+    # PaddleOCR downloads model weights on first use; a persistent disk
+    # prevents re-downloading on every deploy (optional but recommended).
+    # disk:
+    #   name: model-cache
+    #   mountPath: /root/.paddleocr
+    #   sizeGB: 10
